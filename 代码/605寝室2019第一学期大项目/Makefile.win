@@ -1,0 +1,49 @@
+# Project: 605寝室大项目
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Basic_BigNum.o overload_iostream.o add_reduce.o product.o divide_mod.o num_of_power.o compare.o
+LINKOBJ  = main.o Basic_BigNum.o overload_iostream.o add_reduce.o product.o divide_mod.o num_of_power.o compare.o
+LIBS     = -L"E:/Dev-Cpp/MinGW64/lib" -L"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 605寝室大项目.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Basic_BigNum.o: Basic_BigNum.cpp
+	$(CPP) -c Basic_BigNum.cpp -o Basic_BigNum.o $(CXXFLAGS)
+
+overload_iostream.o: overload_iostream.cpp
+	$(CPP) -c overload_iostream.cpp -o overload_iostream.o $(CXXFLAGS)
+
+add_reduce.o: add_reduce.cpp
+	$(CPP) -c add_reduce.cpp -o add_reduce.o $(CXXFLAGS)
+
+product.o: product.cpp
+	$(CPP) -c product.cpp -o product.o $(CXXFLAGS)
+
+divide_mod.o: divide_mod.cpp
+	$(CPP) -c divide_mod.cpp -o divide_mod.o $(CXXFLAGS)
+
+num_of_power.o: num_of_power.cpp
+	$(CPP) -c num_of_power.cpp -o num_of_power.o $(CXXFLAGS)
+
+compare.o: compare.cpp
+	$(CPP) -c compare.cpp -o compare.o $(CXXFLAGS)

@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int Gcd(int a,int b) {
+			int atemp=a,btemp=b;
+			while(true){
+				if(btemp==0){
+					cout<<"a "<<atemp<<endl;
+					return atemp;
+				}
+				else {
+					int temp=atemp;
+					atemp=b;
+					btemp=temp%btemp;
+				}
+			}

@@ -1,0 +1,67 @@
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+const int N = 1e5 + 5;
+ll a[N];//define a[]
+
+int main() {
+	int t;
+	cin>>t;
+	string s;
+	while(t--) {
+		cin>>s;
+		int icount=1;// 从已开始，为了与i区别
+		for(int i=0; i<=s.size(); i++)
+			a[i]=0;//将需要的清零
+		for(int i=0; i<s.size()-1; i++) {
+			if(s[i]=='w'&&s[i+1]=='c') {
+				a[icount++]=i+1;
+			}
+		}
+		a[icount]=s.size();
+		ll ans=0;
+		for(int i=1; i<=icount-1; i++) {
+			ans+=(a[i]-a[i-1])*(a[i+1]-a[i]);
+		}
+		cout<<ans<<endl;
+	}
+	return 0;
+}

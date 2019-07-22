@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://ac.nowcoder.com/acm/contest/881/J -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="google-site-verification" content="lFSmn0rlLR-OPkas5c2GxdhTKP4J4PyaahhQ2TNanjs">
+<meta itemprop="image" content="https://static.nowcoder.com/acm/images-acm/res/logo/acm-logo.png">
+<meta name="description" content="牛客竞赛是互联网求职神器，C++、Java、前端、产品、运营技能学习/备考/求职题库，在线进行百度阿里腾讯网易等互联网名企笔试面试模拟考试练习,和牛人一起讨论经典试题,全面提升你的技术能力">
+<meta name="keywords" content="牛客竞赛,ACM,ICPC,OJ,Virtual Judge,C++笔试面试，Java笔试面试，计算机笔试,计算机面试, IT笔试,笔试题库,笔试练习,IT面试,在线编程,编程学习,牛客竞赛">
+<title>J-Fraction Comparision_2019牛客暑期多校训练营（第一场）</title>
+<meta name="nowcoder-uuid" content="5ead5a5f-24c4-4292-8d4e-527f555c5005">
+<link rel="stylesheet" href="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/global.css">
+<link rel="stylesheet" href="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/global(1).css">
+<link rel="stylesheet" href="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/ui.css">
+<link rel="stylesheet" href="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/base.css">
+<link rel="stylesheet" href="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/coding.css">
+<script src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/hm.js.下载"></script><script charset="utf-8" async="" src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/highlighter.js.下载"></script><script charset="utf-8" async="" src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/index.js.下载"></script><link charset="utf-8" rel="stylesheet" href="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/shCoreDefault.css"><script charset="utf-8" async="" src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/chat.js.下载"></script><script charset="utf-8" async="" src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/notice.js.下载"></script><script charset="utf-8" async="" src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/popupEvaluateProblem.js.下载"></script><script charset="utf-8" async="" src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/star.js.下载"></script><link charset="utf-8" rel="stylesheet" href="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/codemirror.css"><link charset="utf-8" rel="stylesheet" href="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/monokai.css"><script charset="utf-8" async="" src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/codemirror.js.下载"></script><style data-name="js-show-invisibles">.cm-whitespace::before {position: absolute;pointer-events: none;color: #666666;}
+
+.CodeMirror .cm-whitespace-1::before { content: "·";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-1::before { content: "";}
+.CodeMirror .cm-whitespace-2::before { content: "··";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-2::before { content: "";}
+.CodeMirror .cm-whitespace-3::before { content: "···";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-3::before { content: "";}
+.CodeMirror .cm-whitespace-4::before { content: "····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-4::before { content: "";}
+.CodeMirror .cm-whitespace-5::before { content: "·····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-5::before { content: "";}
+.CodeMirror .cm-whitespace-6::before { content: "······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-6::before { content: "";}
+.CodeMirror .cm-whitespace-7::before { content: "·······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-7::before { content: "";}
+.CodeMirror .cm-whitespace-8::before { content: "········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-8::before { content: "";}
+.CodeMirror .cm-whitespace-9::before { content: "·········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-9::before { content: "";}
+.CodeMirror .cm-whitespace-10::before { content: "··········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-10::before { content: "";}
+.CodeMirror .cm-whitespace-11::before { content: "···········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-11::before { content: "";}
+.CodeMirror .cm-whitespace-12::before { content: "············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-12::before { content: "";}
+.CodeMirror .cm-whitespace-13::before { content: "·············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-13::before { content: "";}
+.CodeMirror .cm-whitespace-14::before { content: "··············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-14::before { content: "";}
+.CodeMirror .cm-whitespace-15::before { content: "···············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-15::before { content: "";}
+.CodeMirror .cm-whitespace-16::before { content: "················";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-16::before { content: "";}
+</style><script charset="utf-8" async="" src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/MathJax.js.下载"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.mjx-chtml {display: inline-block; line-height: 0; text-indent: 0; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; word-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; margin: 0; padding: 1px 0}
+.MJXc-display {display: block; text-align: center; margin: 1em 0; padding: 0}
+.mjx-chtml[tabindex]:focus, body :focus .mjx-chtml[tabindex] {display: inline-table}
+.mjx-full-width {text-align: center; display: table-cell!important; width: 10000em}
+.mjx-math {display: inline-block; border-collapse: separate; border-spacing: 0}
+.mjx-math * {display: inline-block; -webkit-box-sizing: content-box!important; -moz-box-sizing: content-box!important; box-sizing: content-box!important; text-align: left}
+.mjx-numerator {display: block; text-align: center}
+.mjx-denominator {display: block; text-align: center}
+.MJXc-stacked {height: 0; position: relative}
+.MJXc-stacked > * {position: absolute}
+.MJXc-bevelled > * {display: inline-block}
+.mjx-stack {display: inline-block}
+.mjx-op {display: block}
+.mjx-under {display: table-cell}
+.mjx-over {display: block}
+.mjx-over > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-under > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-stack > .mjx-sup {display: block}
+.mjx-stack > .mjx-sub {display: block}
+.mjx-prestack > .mjx-presup {display: block}
+.mjx-prestack > .mjx-presub {display: block}
+.mjx-delim-h > .mjx-char {display: inline-block}
+.mjx-surd {vertical-align: top}
+.mjx-mphantom * {visibility: hidden}
+.mjx-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 2px 3px; font-style: normal; font-size: 90%}
+.mjx-annotation-xml {line-height: normal}
+.mjx-menclose > svg {fill: none; stroke: currentColor}
+.mjx-mtr {display: table-row}
+.mjx-mlabeledtr {display: table-row}
+.mjx-mtd {display: table-cell; text-align: center}
+.mjx-label {display: table-row}
+.mjx-box {display: inline-block}
+.mjx-block {display: block}
+.mjx-span {display: inline}
+.mjx-char {display: block; white-space: pre}
+.mjx-itable {display: inline-table; width: auto}
+.mjx-row {display: table-row}
+.mjx-cell {display: table-cell}
+.mjx-table {display: table; width: 100%}
+.mjx-line {display: block; height: 0}
+.mjx-strut {width: 0; padding-top: 1em}
+.mjx-vsize {width: 0}
+.MJXc-space1 {margin-left: .167em}
+.MJXc-space2 {margin-left: .222em}
+.MJXc-space3 {margin-left: .278em}
+.mjx-chartest {display: block; visibility: hidden; position: absolute; top: 0; line-height: normal; font-size: 500%}
+.mjx-chartest .mjx-char {display: inline}
+.mjx-chartest .mjx-box {padding-top: 1000px}
+.MJXc-processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MJXc-processed {display: none}
+.mjx-test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.mjx-test.mjx-test-display {display: table!important}
+.mjx-test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.mjx-test.mjx-test-default {display: block!important; clear: both}
+.mjx-ex-box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.mjx-test-inline .mjx-left-box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .mjx-right-box {display: inline-block; width: 0; float: right}
+.mjx-test-display .mjx-right-box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+#MathJax_CHTML_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.mjx-chtml .mjx-noError {line-height: 1.2; vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+.MJXc-TeX-unknown-R {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: normal}
+.MJXc-TeX-unknown-I {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: normal}
+.MJXc-TeX-unknown-B {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: bold}
+.MJXc-TeX-unknown-BI {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: bold}
+.MJXc-TeX-ams-R {font-family: MJXc-TeX-ams-R,MJXc-TeX-ams-Rw}
+.MJXc-TeX-cal-B {font-family: MJXc-TeX-cal-B,MJXc-TeX-cal-Bx,MJXc-TeX-cal-Bw}
+.MJXc-TeX-frak-R {font-family: MJXc-TeX-frak-R,MJXc-TeX-frak-Rw}
+.MJXc-TeX-frak-B {font-family: MJXc-TeX-frak-B,MJXc-TeX-frak-Bx,MJXc-TeX-frak-Bw}
+.MJXc-TeX-math-BI {font-family: MJXc-TeX-math-BI,MJXc-TeX-math-BIx,MJXc-TeX-math-BIw}
+.MJXc-TeX-sans-R {font-family: MJXc-TeX-sans-R,MJXc-TeX-sans-Rw}
+.MJXc-TeX-sans-B {font-family: MJXc-TeX-sans-B,MJXc-TeX-sans-Bx,MJXc-TeX-sans-Bw}
+.MJXc-TeX-sans-I {font-family: MJXc-TeX-sans-I,MJXc-TeX-sans-Ix,MJXc-TeX-sans-Iw}
+.MJXc-TeX-script-R {font-family: MJXc-TeX-script-R,MJXc-TeX-script-Rw}
+.MJXc-TeX-type-R {font-family: MJXc-TeX-type-R,MJXc-TeX-type-Rw}
+.MJXc-TeX-cal-R {font-family: MJXc-TeX-cal-R,MJXc-TeX-cal-Rw}
+.MJXc-TeX-main-B {font-family: MJXc-TeX-main-B,MJXc-TeX-main-Bx,MJXc-TeX-main-Bw}
+.MJXc-TeX-main-I {font-family: MJXc-TeX-main-I,MJXc-TeX-main-Ix,MJXc-TeX-main-Iw}
+.MJXc-TeX-main-R {font-family: MJXc-TeX-main-R,MJXc-TeX-main-Rw}
+.MJXc-TeX-math-I {font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw}
+.MJXc-TeX-size1-R {font-family: MJXc-TeX-size1-R,MJXc-TeX-size1-Rw}
+.MJXc-TeX-size2-R {font-family: MJXc-TeX-size2-R,MJXc-TeX-size2-Rw}
+.MJXc-TeX-size3-R {font-family: MJXc-TeX-size3-R,MJXc-TeX-size3-Rw}
+.MJXc-TeX-size4-R {font-family: MJXc-TeX-size4-R,MJXc-TeX-size4-Rw}
+.MJXc-TeX-vec-R {font-family: MJXc-TeX-vec-R,MJXc-TeX-vec-Rw}
+.MJXc-TeX-vec-B {font-family: MJXc-TeX-vec-B,MJXc-TeX-vec-Bx,MJXc-TeX-vec-Bw}
+@font-face {font-family: MJXc-TeX-ams-R; src: local('MathJax_AMS'), local('MathJax_AMS-Regular')}
+@font-face {font-family: MJXc-TeX-ams-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-B; src: local('MathJax_Caligraphic Bold'), local('MathJax_Caligraphic-Bold')}
+@font-face {font-family: MJXc-TeX-cal-Bx; src: local('MathJax_Caligraphic'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-cal-Bw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-R; src: local('MathJax_Fraktur'), local('MathJax_Fraktur-Regular')}
+@font-face {font-family: MJXc-TeX-frak-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-B; src: local('MathJax_Fraktur Bold'), local('MathJax_Fraktur-Bold')}
+@font-face {font-family: MJXc-TeX-frak-Bx; src: local('MathJax_Fraktur'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-frak-Bw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-BI; src: local('MathJax_Math BoldItalic'), local('MathJax_Math-BoldItalic')}
+@font-face {font-family: MJXc-TeX-math-BIx; src: local('MathJax_Math'); font-weight: bold; font-style: italic}
+@font-face {font-family: MJXc-TeX-math-BIw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-R; src: local('MathJax_SansSerif'), local('MathJax_SansSerif-Regular')}
+@font-face {font-family: MJXc-TeX-sans-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-B; src: local('MathJax_SansSerif Bold'), local('MathJax_SansSerif-Bold')}
+@font-face {font-family: MJXc-TeX-sans-Bx; src: local('MathJax_SansSerif'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-sans-Bw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-I; src: local('MathJax_SansSerif Italic'), local('MathJax_SansSerif-Italic')}
+@font-face {font-family: MJXc-TeX-sans-Ix; src: local('MathJax_SansSerif'); font-style: italic}
+@font-face {font-family: MJXc-TeX-sans-Iw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-script-R; src: local('MathJax_Script'), local('MathJax_Script-Regular')}
+@font-face {font-family: MJXc-TeX-script-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-type-R; src: local('MathJax_Typewriter'), local('MathJax_Typewriter-Regular')}
+@font-face {font-family: MJXc-TeX-type-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-R; src: local('MathJax_Caligraphic'), local('MathJax_Caligraphic-Regular')}
+@font-face {font-family: MJXc-TeX-cal-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-B; src: local('MathJax_Main Bold'), local('MathJax_Main-Bold')}
+@font-face {font-family: MJXc-TeX-main-Bx; src: local('MathJax_Main'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-main-Bw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-I; src: local('MathJax_Main Italic'), local('MathJax_Main-Italic')}
+@font-face {font-family: MJXc-TeX-main-Ix; src: local('MathJax_Main'); font-style: italic}
+@font-face {font-family: MJXc-TeX-main-Iw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-R; src: local('MathJax_Main'), local('MathJax_Main-Regular')}
+@font-face {font-family: MJXc-TeX-main-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-I; src: local('MathJax_Math Italic'), local('MathJax_Math-Italic')}
+@font-face {font-family: MJXc-TeX-math-Ix; src: local('MathJax_Math'); font-style: italic}
+@font-face {font-family: MJXc-TeX-math-Iw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size1-R; src: local('MathJax_Size1'), local('MathJax_Size1-Regular')}
+@font-face {font-family: MJXc-TeX-size1-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size2-R; src: local('MathJax_Size2'), local('MathJax_Size2-Regular')}
+@font-face {font-family: MJXc-TeX-size2-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size3-R; src: local('MathJax_Size3'), local('MathJax_Size3-Regular')}
+@font-face {font-family: MJXc-TeX-size3-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size4-R; src: local('MathJax_Size4'), local('MathJax_Size4-Regular')}
+@font-face {font-family: MJXc-TeX-size4-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-R; src: local('MathJax_Vector'), local('MathJax_Vector-Regular')}
+@font-face {font-family: MJXc-TeX-vec-Rw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-B; src: local('MathJax_Vector Bold'), local('MathJax_Vector-Bold')}
+@font-face {font-family: MJXc-TeX-vec-Bx; src: local('MathJax_Vector'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-vec-Bw; src /*1*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot'); src /*2*/: url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff') format('woff'), url('https://static.nowcoder.com/nc/jslib/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf') format('opentype')}
+</style></head>
+<body class="full-screen-body code-body-hidden"><div id="MathJax_Message" style="display: none;"></div>
+<div class="nk-container nk-acm-container">
+<div id="jsCpn_8_component_0" class=" notice-tip-bar" style="top: 0px;"><div class="notice-tip-content"><i class="icon-volume-down"></i><span class="js-part-notice"></span><a href="javascript:void(0);" class="icon-remove"></a></div></div><div class="nk-main full-screen-subject clearfix" style="padding-bottom: 0px; height: 601px; width: 1217px;">
+<div class="nowcoder-topic js-left code-body-hidden" style="height: 601px;">
+<div class="terminal-topic-wrap js-topic-title">
+<div class="terminal-topic-title">
+<i class="icon-list"></i>Fraction Comparision
+</div>
+</div>
+<div class="terminal-topic" style="height: 551px; overflow-y: auto; width: 519px;">
+<div class="subject-question" style="margin:10px 0;">
+<div class="subject-item-wrap">
+<span>时间限制：C/C++ 2秒，其他语言4秒</span><br>
+<span>空间限制：C/C++ 524288K，其他语言1048576K</span><br>
+<span> 64bit IO Format: %lld</span><br>
+</div>
+</div>
+<h2 class="subject-item-title">题目描述
+<a href="javascript:void(0);" class="icon-fullscreen js-full-question" data-title="只看题目描述" data-tips-index="1"></a>
+<a href="javascript:void(0);" class="icon-resize-small js-small-question" style="display:none;" data-title="收起全屏，编写代码" data-tips-index="2"></a>
+</h2>
+<div class="subject-describe">
+<div style="margin-bottom:10px;">Bobo has two fractions <span style=""><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-1-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mfrac&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><span id="MJXc-Node-1" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2" class="mjx-mrow"><span id="MJXc-Node-3" class="mjx-mfrac"><span class="mjx-box MJXc-stacked" style="width: 0.546em; padding: 0px 0.12em;"><span class="mjx-numerator" style="font-size: 70.7%; width: 0.772em; top: -1.152em;"><span id="MJXc-Node-4" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.289em;">x</span></span></span><span class="mjx-denominator" style="font-size: 70.7%; width: 0.772em; bottom: -0.523em;"><span id="MJXc-Node-5" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.289em;">a</span></span></span><span class="mjx-line" style="border-bottom: 1.3px solid; top: -0.295em; width: 0.546em;"></span></span><span class="mjx-vsize" style="height: 1.184em; vertical-align: -0.37em;"></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mi>x</mi><mi>a</mi></mfrac></math></span></span><script type="math/tex" id="MathJax-Element-1">\frac{x}{a}</script></span> and <span style=""><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-2-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mfrac&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><span id="MJXc-Node-6" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-7" class="mjx-mrow"><span id="MJXc-Node-8" class="mjx-mfrac"><span class="mjx-box MJXc-stacked" style="width: 0.492em; padding: 0px 0.12em;"><span class="mjx-numerator" style="font-size: 70.7%; width: 0.696em; top: -1.346em;"><span id="MJXc-Node-9" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.504em; padding-right: 0.006em;">y</span></span></span><span class="mjx-denominator" style="font-size: 70.7%; width: 0.696em; bottom: -0.696em;"><span id="MJXc-Node-10" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.504em; padding-bottom: 0.289em;">b</span></span></span><span class="mjx-line" style="border-bottom: 1.3px solid; top: -0.295em; width: 0.492em;"></span></span><span class="mjx-vsize" style="height: 1.444em; vertical-align: -0.492em;"></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mi>y</mi><mi>b</mi></mfrac></math></span></span><script type="math/tex" id="MathJax-Element-2">\frac{y}{b}</script></span>. He wants to compare them. Find the result.</div>
+<h2 style="font-size:14px;font-weight:bold;color:#34495e;">输入描述:</h2>
+<pre>The input consists of several test cases and is terminated by end-of-file.<br><br>Each test case contains four integers x, a, y, b.<br><br>* <span style=""><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-3-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mn&gt;18&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><span id="MJXc-Node-11" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-12" class="mjx-mrow"><span id="MJXc-Node-13" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.361em;">0</span></span><span id="MJXc-Node-14" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.504em;">≤</span></span><span id="MJXc-Node-15" class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.289em;">x</span></span><span id="MJXc-Node-16" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.139em; padding-bottom: 0.504em;">,</span></span><span id="MJXc-Node-17" class="mjx-mi MJXc-space1"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.504em; padding-right: 0.006em;">y</span></span><span id="MJXc-Node-18" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.504em;">≤</span></span><span id="MJXc-Node-19" class="mjx-msubsup MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-20" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.361em;">10</span></span></span><span class="mjx-sup" style="font-size: 70.7%; vertical-align: 0.591em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-21" class="mjx-texatom" style=""><span id="MJXc-Node-22" class="mjx-mrow"><span id="MJXc-Node-23" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.361em;">18</span></span></span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>≤</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>≤</mo><msup><mn>10</mn><mrow class="MJX-TeXAtom-ORD"><mn>18</mn></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-3">0 \leq x, y \leq 10^{18}</script></span><br>* <span style=""><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-4-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;9&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><span id="MJXc-Node-24" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-25" class="mjx-mrow"><span id="MJXc-Node-26" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.361em;">1</span></span><span id="MJXc-Node-27" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.504em;">≤</span></span><span id="MJXc-Node-28" class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.289em;">a</span></span><span id="MJXc-Node-29" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.139em; padding-bottom: 0.504em;">,</span></span><span id="MJXc-Node-30" class="mjx-mi MJXc-space1"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.504em; padding-bottom: 0.289em;">b</span></span><span id="MJXc-Node-31" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.504em;">≤</span></span><span id="MJXc-Node-32" class="mjx-msubsup MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-33" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.361em;">10</span></span></span><span class="mjx-sup" style="font-size: 70.7%; vertical-align: 0.591em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-34" class="mjx-mn" style=""><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.361em;">9</span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>≤</mo><msup><mn>10</mn><mn>9</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-4">1 \leq a, b \leq 10^9</script></span><br>* There are at most <span style=""><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-5-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><span id="MJXc-Node-35" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-36" class="mjx-mrow"><span id="MJXc-Node-37" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-38" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.361em;">10</span></span></span><span class="mjx-sup" style="font-size: 70.7%; vertical-align: 0.591em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-39" class="mjx-mn" style=""><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.361em; padding-bottom: 0.361em;">5</span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>10</mn><mn>5</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-5">10^5</script></span> test cases.</pre>
+<h2 style="font-size:14px;font-weight:bold;color:#34495e;">输出描述:</h2>
+<pre>For each test case, print `=` if <span style=""><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-6-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mfrac&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><span id="MJXc-Node-40" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-41" class="mjx-mrow"><span id="MJXc-Node-42" class="mjx-mfrac"><span class="mjx-box MJXc-stacked" style="width: 0.546em; padding: 0px 0.12em;"><span class="mjx-numerator" style="font-size: 70.7%; width: 0.772em; top: -1.152em;"><span id="MJXc-Node-43" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.289em;">x</span></span></span><span class="mjx-denominator" style="font-size: 70.7%; width: 0.772em; bottom: -0.523em;"><span id="MJXc-Node-44" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.289em;">a</span></span></span><span class="mjx-line" style="border-bottom: 1.3px solid; top: -0.295em; width: 0.546em;"></span></span><span class="mjx-vsize" style="height: 1.184em; vertical-align: -0.37em;"></span></span><span id="MJXc-Node-45" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.075em; padding-bottom: 0.289em;">=</span></span><span id="MJXc-Node-46" class="mjx-mfrac MJXc-space3"><span class="mjx-box MJXc-stacked" style="width: 0.492em; padding: 0px 0.12em;"><span class="mjx-numerator" style="font-size: 70.7%; width: 0.696em; top: -1.346em;"><span id="MJXc-Node-47" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.504em; padding-right: 0.006em;">y</span></span></span><span class="mjx-denominator" style="font-size: 70.7%; width: 0.696em; bottom: -0.696em;"><span id="MJXc-Node-48" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.504em; padding-bottom: 0.289em;">b</span></span></span><span class="mjx-line" style="border-bottom: 1.3px solid; top: -0.295em; width: 0.492em;"></span></span><span class="mjx-vsize" style="height: 1.444em; vertical-align: -0.492em;"></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mi>x</mi><mi>a</mi></mfrac><mo>=</mo><mfrac><mi>y</mi><mi>b</mi></mfrac></math></span></span><script type="math/tex" id="MathJax-Element-6">\frac{x}{a} = \frac{y}{b}</script></span>. Print `&lt;` if <span style=""><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-7-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mfrac&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;&amp;lt;&lt;/mo&gt;&lt;mfrac&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><span id="MJXc-Node-49" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-50" class="mjx-mrow"><span id="MJXc-Node-51" class="mjx-mfrac"><span class="mjx-box MJXc-stacked" style="width: 0.546em; padding: 0px 0.12em;"><span class="mjx-numerator" style="font-size: 70.7%; width: 0.772em; top: -1.152em;"><span id="MJXc-Node-52" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.289em;">x</span></span></span><span class="mjx-denominator" style="font-size: 70.7%; width: 0.772em; bottom: -0.523em;"><span id="MJXc-Node-53" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.289em;">a</span></span></span><span class="mjx-line" style="border-bottom: 1.3px solid; top: -0.295em; width: 0.546em;"></span></span><span class="mjx-vsize" style="height: 1.184em; vertical-align: -0.37em;"></span></span><span id="MJXc-Node-54" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.289em; padding-bottom: 0.361em;">&lt;</span></span><span id="MJXc-Node-55" class="mjx-mfrac MJXc-space3"><span class="mjx-box MJXc-stacked" style="width: 0.492em; padding: 0px 0.12em;"><span class="mjx-numerator" style="font-size: 70.7%; width: 0.696em; top: -1.346em;"><span id="MJXc-Node-56" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.218em; padding-bottom: 0.504em; padding-right: 0.006em;">y</span></span></span><span class="mjx-denominator" style="font-size: 70.7%; width: 0.696em; bottom: -0.696em;"><span id="MJXc-Node-57" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.504em; padding-bottom: 0.289em;">b</span></span></span><span class="mjx-line" style="border-bottom: 1.3px solid; top: -0.295em; width: 0.492em;"></span></span><span class="mjx-vsize" style="height: 1.444em; vertical-align: -0.492em;"></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mi>x</mi><mi>a</mi></mfrac><mo>&lt;</mo><mfrac><mi>y</mi><mi>b</mi></mfrac></math></span></span><script type="math/tex" id="MathJax-Element-7">\frac{x}{a} < \frac{y}{b}</script></span>. Print `&gt;` otherwise.</pre>
+<div class="question-oi">
+<div class="question-oi-hd">
+示例1
+</div>
+<div class="question-oi-bd">
+<div class="question-oi-mod">
+<h2>输入</h2>
+<a class="code-copy-btn" href="javascript:void(0);" data-clipboard-text="1 2 1 1
+1 1 1 2
+1 1 1 1">复制</a>
+<div class="question-oi-cont">
+<pre>1 2 1 1
+1 1 1 2
+1 1 1 1</pre>
+</div>
+</div>
+<div class="question-oi-mod">
+<h2>输出</h2>
+<a class="code-copy-btn" href="javascript:void(0);" data-clipboard-text="&lt;
+&gt;
+=">复制</a>
+<div class="question-oi-cont">
+<pre>&lt;
+&gt;
+=</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="full-separator" style="z-index: 998; right: 0px; left: auto; height: 551px; top: 50px;"></div>
+<div class="topic-popup js-topic-menu" style="display: none; z-index: 999; height: 601px;">
+<div class="terminal-topic-wrap">
+<div class="terminal-topic-title">
+<i class="icon-list"></i>Fraction Comparision
+</div>
+<div class="topic-popup-bd">
+<a href="https://ac.nowcoder.com/acm/contest/881/J?page=" class="back-to-all"><i class="icon-angle-left"></i>返回全部题目</a>
+<div class="topic-title-list">
+<h2></h2>
+<div class="js-list" style="overflow-y: auto; height: 601px;">
+<div class="js-list-tips">列表加载中...</div>
+<div class="js-ul-list"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="nowcoder-topic-answer js-right code-body-hidden" style="height: 601px;">
+<div class="topic-nav clearfix">
+<div class="topic-nav-cont">
+<a href="https://ac.nowcoder.com/acm/contest/profile/302642563" class="head-pic" target="_blank">
+<img src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/3509392_1560086161142_1ABB2DC3D76311944FFDBE9980FBAADD">
+</a>
+<ul class="code-list-box clearfix">
+<li>
+<a title="返回比赛主页" href="https://ac.nowcoder.com/acm/contest/881" class="code-list-dis">
+<i class="icon-home"></i>
+比赛主页
+</a>
+</li>
+<li><a title="查看我的提交记录" href="https://ac.nowcoder.com/acm/contest/881#submit/{%22onlyMyStatusFilter%22%3Atrue%2C%22problemIdFilter%22%3A%2251089%22}" class="code-list-sub" target="_blank"><i class="icon-file-alt"></i> 团队提交</a></li>
+</ul>
+</div>
+</div>
+<div class="subject-eidt-box" id="jsCodeEditor" style="height: 494px;"><div id="jsCpn_0_component_0" class="subject-eidt-box" style="position: relative; height: 494px;"><div class="subject-eidt-header"><div id="jsCpn_1_component_0" role="group" class="btn-group"><button class="btn btn-default dropdown-toggle"><span class="dropdown-value">Python3(3.5.2)</span><span class="caret"></span></button><ul class="dropdown-menu"></ul></div><a href="javascript:void(0);" class="ico-fresh js-fresh-code" title="还原模板代码">重置</a><a href="javascript:void(0);" class="ico-computer js-self-test" title="代码自测">自测</a><div class="subject-edit-oprt js-head-tool"><a href="javascript:void(0);" class="icon-fullscreen js-full-screen"></a><div class="format-setting"><a href="javascript:void(0);" class="icon-cog"></a><ul class="dropdown-menu js-switch"><li style="width:180px;"><a href="javascript:void(0);"><label id="jsCpn_2_checkbox_0" class="checkbox checked"><span class="icons"></span><input type="checkbox" data-toggle="checkbox" value="" name="" checked="checked">代码自动补全</label></a></li><li style="width:180px;"><a href="javascript:void(0);"><label id="jsCpn_3_checkbox_1" class="checkbox checked"><span class="icons"></span><input type="checkbox" data-toggle="checkbox" value="" name="" checked="checked">空格tab提示</label></a></li><li style="width:180px;"><div class="code-typography-item"><span class="code-typography-txt">Tab长度</span><span class="code-typography-oprt"><a href="javascript:void(0);" class="typography-oprt js-space-action" data-type="-">-</a><span class="js-result">4</span><a href="javascript:void(0);" class="typography-oprt js-space-action" data-type="+">+</a></span></div></li></ul></div></div></div><div class="js-editor-body code-font"><div class="CodeMirror cm-s-monokai" style="width: 100%; height: 446px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 33px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: -17px; border-right-width: 13px; min-height: 215px; min-width: 393.333px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>10</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 20.6667px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword cm-overlay cm-cm-eol">while</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-keyword cm-overlay cm-cm-eol">True</span><span class="cm-overlay cm-cm-eol">:</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-4">    </span><span class="cm-keyword cm-overlay cm-cm-eol">try</span><span class="cm-overlay cm-cm-eol">:</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-8">        </span><span class="cm-variable cm-overlay cm-cm-eol">x</span><span class="cm-overlay cm-cm-eol">,</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">a</span><span class="cm-overlay cm-cm-eol">,</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">y</span><span class="cm-overlay cm-cm-eol">,</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">b</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">=</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-builtin cm-overlay cm-cm-eol">map</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-builtin cm-overlay cm-cm-eol">int</span><span class="cm-overlay cm-cm-eol">,</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-builtin cm-overlay cm-cm-eol">input</span><span class="cm-overlay cm-cm-eol">().</span><span class="cm-property cm-overlay cm-cm-eol">split</span><span class="cm-overlay cm-cm-eol">())</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-8">        </span><span class="cm-variable cm-overlay cm-cm-eol">x</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">*=</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">b</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-8">        </span><span class="cm-variable cm-overlay cm-cm-eol">y</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">*=</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">a</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-8">        </span><span class="cm-keyword cm-overlay cm-cm-eol">if</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">x</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">==</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">y</span><span class="cm-overlay cm-cm-eol">:</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-builtin cm-overlay cm-cm-eol">print</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-string cm-overlay cm-cm-eol">'='</span><span class="cm-overlay cm-cm-eol">)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-8">        </span><span class="cm-keyword cm-overlay cm-cm-eol">elif</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">x</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">&lt;</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">y</span><span class="cm-overlay cm-cm-eol">:</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-builtin cm-overlay cm-cm-eol">print</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-string cm-overlay cm-cm-eol">'&lt;'</span><span class="cm-overlay cm-cm-eol">)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-8">        </span><span class="cm-keyword cm-overlay cm-cm-eol">else</span><span class="cm-overlay cm-cm-eol">:</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-builtin cm-overlay cm-cm-eol">print</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-string cm-overlay cm-cm-eol">'&gt;'</span><span class="cm-overlay cm-cm-eol">)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-4">    </span><span class="cm-keyword cm-overlay cm-cm-eol">except</span><span class="cm-overlay cm-cm-eol">:</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-8">        </span><span class="cm-keyword cm-overlay cm-cm-eol">break</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 215px;"></div><div class="CodeMirror-gutters" style="height: 228px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></div></div></div>
+<div class="code-edit-fold js-fold">
+<a href="javascript:void(0);" class="icon-angle-up"></a>
+</div>
+<div class="code-edit-oprt">
+<a id="jsRunCode" href="javascript:void(0);" class="btn btn-info">提交</a>
+<a href="javascript:void(0);" class="link-green" id="jsRunDuration"></a>
+<div class="code-help-wrap js-coding-help">
+<a href="javascript:void(0);"><i class="icon-question-sign"></i>编程常见问题</a>
+</div>
+</div>
+<div class="passed-wrapper js-right-bottom" style="margin: 0px; padding: 5px 10px; overflow: hidden; display: none; width: 649px; height: 110.2px;">
+<div id="jsRunInfo" style="margin: 0px; overflow-y: auto; color: rgb(0, 188, 155); font-size: 14px; height: 110px;">提交之后，这里将会显示运行结果</div>
+</div>
+</div>
+</div>
+</div>
+<textarea id="javaTpl" style="display:none;"></textarea>
+<textarea id="cTpl" style="display:none;"></textarea>
+<textarea id="pythonTpl" style="display:none;">
+</textarea>
+<textarea id="cSharpTpl" style="display:none;">
+</textarea>
+<textarea id="jsTpl" style="display:none;">
+</textarea>
+<textarea id="phpTpl" style="display:none;">
+</textarea>
+<textarea id="jsV8Tpl" style="display:none;">
+</textarea>
+<div class="js-sample-io" style="display:none;">
+<textarea data-type="input">1 2 1 1
+1 1 1 2
+1 1 1 1</textarea>
+<textarea data-type="output">&lt;
+&gt;
+=</textarea>
+</div>
+<script type="text/javascript">
+window.codeJudgeType = '0';
+window.supportLang = 'java,cpp';
+</script>
+<script>
+window.isLogin = true;
+window.globalInfo = {
+ownerId: '3509392',
+ownerName: '远岫',
+ownerTinyHead: 'https://images.nowcoder.com/images/20171215/3509392_1513336160452_7C2C60506876716CCF0E706DB13D4511@0e_100w_100h_0c_1i_1o_90Q_1x',
+ownerMainHead: 'https://images.nowcoder.com/images/20171215/3509392_1513336160452_7C2C60506876716CCF0E706DB13D4511@0e_200w_200h_0c_1i_1o_90Q_1x',
+ownerEmail: '1145178610@qq.com',
+ownerPhone: '',
+ownerType: '1',
+status: '0',
+honorLevel: '1',
+gender: '男',
+isCompleteInfo: true,
+canLoadInIframe: 'true',
+isAcmCompleteInfo: true
+};
+window.useNeteaseCaptcha = true;
+</script>
+<script type="text/javascript">
+window.ncDeployImageRoot = "//static.nowcoder.com/acm";
+window.ncJsVersion = "1.03.01";
+window.ncJsPluginVersion = "1.0.17";
+window.ncIsInNowcoderMainSite = true;
+</script>
+<script src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/sea.js.下载" type="text/javascript"></script>
+<script type="text/javascript">
+if (!window.seajs) {
+var oBody = document.body;
+var aChild = oBody.childNodes;
+var oDv = document.createElement('div');
+oDv.innerHTML = [
+'<div style="text-align:center;">',
+'<div style="font-size:18px;margin:20px 0;font-weight: bold;">',
+'静态文件加载出错，请检查当前网络情况是否正常，或者按照下面步骤修改电脑的DNS',
+'<br />推荐使用以下DNS: 223.5.5.5(首选) 和 223.6.6.6(备用)，建议使用手机热点',
+'</div>',
+'<img style="border:1px solid #ccc;" src="//ww2.sinaimg.cn/mw690/44b25cb0jw1f5vt92tsz1j20o03d97dt.jpg" />',
+'</div>'].join('');
+aChild.length === 0 && oBody.appendChild(oDv);
+aChild.length > 0 && oBody.insertBefore(oDv, aChild[0]);
+}
+</script>
+<script src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/nc.cpn.js.下载" type="text/javascript"></script>
+<script src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/pc.js.下载" type="text/javascript"></script>
+<script src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/base.js.下载" type="text/javascript"></script>
+<script type="text/javascript">
+seajs.use('acm/nowcoder/1.0.177/javascripts-acm/site/common/index');
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "//hm.baidu.com/hm.js?a808a1326b6c06c437de769d1b85b870";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">
+window.pageInfo = {
+isPdfContent:  false ,
+contestId: '881',
+questionId: '522359',
+problemId: '51089',
+isFinished: false,
+isSignUp: true,
+signUpId: 390398,
+isTeamSignUp: true,
+teamId: 302642563,
+uuid: 'c8b4d4e39cf84158aad46b5b217c5ed6',
+tagId: '4', //定制
+subTagId: '1', //定制
+doneQuestionId: '881', //定制
+selfType: '8', //定制自测
+codeJudgeType: '0',
+supportLang: 'java,cpp'
+};
+</script>
+<script type="text/javascript">
+seajs.use('acm/nowcoder/1.0.177/javascripts-acm/site/terminal/contest/index');
+</script>
+
+
+<div id="jsCpn_4_component_0" class=" subject-oprt-wrap pannel-chat " style="display:none;"><div class="oprt-hd"><div class="s-pannel-oprt"><a class="icon-angle-up" style="color:#333;margin-top:10px;background:none;"></a></div><span class="s-pannel-title">比赛问题咨询</span></div><div class="oprt-bd"><div class="pannel-chat-list"><div id="jsList"><div class="pcl-item clearfix"><div class="pcl-head"><a class="list-head" href="javascript:void(0);"><img alt="头像" src="./J-Fraction Comparision_2019牛客暑期多校训练营（第一场）_files/56_1468219359225_DFC72C14F1C7419B93207CC1C1A560C9"></a><span class="pcl-name" style="">出题人</span></div><div class="tooltip fade right in"><div class="tooltip-arrow" style="top:18px;"></div><div class="tooltip-inner letter-chat clearfix"><div class="pcl-item"><p>欢迎参加比赛，我是本场比赛的出题人，如有以下问题，可以点击查询解决方法：</p><p><a class="js-auto-msg link-green" href="javascript:void(0);" data-index="1">1:为什么代码本地能通过，在线提交提示答案错误？</a></p><p><a class="js-auto-msg link-green" href="javascript:void(0);" data-index="2">2:为什么代码本地能通过，在线提交提示答案超时？</a></p><p>如以上问题未解决你的困难，请选择你遇到的问题类型并进行详细描述，我将尽快为你解答。</p><p>请注意，与比赛内容相关的技术问题一概不做回答，比赛期间请自行思考作答。祝比赛加油^^ </p></div></div></div></div></div></div><div class="pannel-chat-type clearfix"><div id="jsCpn_5_component_0" class="btn-group-xs btn-group" style="width: 150px;"><button class="btn btn-default dropdown-toggle"><span class="js-txt dropdown-value" title="题目问题" style="width: 100px;">题目问题</span><span class="caret"></span></button></div><a href="javascript:void(0);" class="js-show-auto-msg link-green" style="display:inline-block;float:right;font-size:12px;">常见问题</a></div><textarea class="pannel-chat-txt" id="jsTxtIpt"></textarea></div></div><div class="code-question-pannel" style="z-index:998;bottom:0px;"><i class="ico-q-msg"></i><span>比赛问题咨询</span><a class="icon-angle-up"></a></div><div id="jsCpn_7_component_0" style="display:none;"><div id="jsCpn_6_component_0" class="  btn-group open" style="display:block;"><ul class="dropdown-menu" style="position:static;float:none;border-bottom:0;overflow-x:hidden;"></ul><div style="padding:20px 0;text-align:center;font-size:14px;display:none;background:#fff;border:1px solid #d4d4d4;" class="js-none">没有结果</div></div></div></body></html>

@@ -1,0 +1,2 @@
+﻿  test.cpp
+F:\不常用文件\acm\代码\Vs2019\学习位运算\学习位运算\test.cpp(1,9): error C1083:  无法打开包括文件: “bits/stdc++.h”: No such file or directory

@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+int t, n, cnum, maxsum, maxi, bmax, emax, bi, ei;
+int a[100002];
+scanf("%d",&t);
+cnum = 0;
+while(t--){
+cnum++;
+scanf("%d",&n);
+for(int i=0;i<n; i++)
+scanf("%d",&a[i]);
+maxsum = -32768;
+maxi= 0;
+bmax = 0;
+emax = 0;
+bi = 0;
+ei = -1;
+for(int i=0; i<n; i++){
+if(maxi<0){
+maxi=a[i];
+bi = i;
+ei = i;
+} 
+else {
+maxi+=a[i];
+ei++;
+}
+if(maxi>maxsum){
+maxsum = maxi;
+bmax = bi;
+emax = ei;
+}
+}
+printf("Case %d:\n", cnum);
+printf("%d %d %d\n", maxsum, bmax+1, emax+1);
+if(t){
+printf("\n");
+}
+}

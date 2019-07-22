@@ -1,0 +1,15 @@
+#include"head.h"
+int main(){
+	char str[N];
+	string post;
+	char ans;
+	int i = 0;
+	while (gets_s(str, N))
+	{
+		i++;
+		post = MidToPost(str);
+		ans = GetValuePost(post);
+		printf("Expression %d: %c\n", i, ans);
+	}
+	return 0;
+}
