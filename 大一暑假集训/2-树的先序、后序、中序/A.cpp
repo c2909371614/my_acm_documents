@@ -35,7 +35,7 @@ void back_pass(ll n)
 	back_pass(node[n].r_index);
 	back_val.push_back(node[n].val); 
 }
-ll main()
+int main()
 {
 	ll n;
 	while(cin >> n)
