@@ -34,17 +34,19 @@ int vis[N], used[N], restbj[N];
 LL restmin[N];
 int checkok(int x, int las) { //5.dfs找未被“封死”的子树
 	int bj = 1, i, bbj = 0;
-	if(vis[x])return 1;//封死直接返回 1 
+	if(vis[x])
+		return 1;//封死直接返回 1 
 	for(i = h[x]; i != -1; i = ne[i]) {
-		if(to[i]==las)continue;
-		bbj=1;
-		if(!checkok(to[i],x)) {
-			bj=0;
-			if(x==1) b[++nb].id=to[i],b[nb].rest=w[i];
+		if(to[i] == las)continue;
+		bbj = 1;
+		if(!checkok(to[i], x)) {
+			bj = 0;
+			if(x == 1) b[++nb].id = to[i], b[nb].rest = w[i];
 			else return 0;
 		}
 	}
-	if(!bbj)return 0;
+	if(!bbj)
+		return 0;
 	return bj;
 }
 bool cmp(node x, node y) {
@@ -59,7 +61,8 @@ int check(LL lim) {
 	for(i = 1; i <= m; ++i)
 		used[i] = 0;
 	for(i = 1; i <= m; ++i) {
-		x = army[i], num = 0;
+		x = army[i]
+		num = 0;
 		for(j = 17; j >= 0; --j) //3.上提军队
 			if(f[x][j] > 1 && num + dis[x][j] <= lim)
 				num += dis[x][j],
@@ -93,17 +96,21 @@ int main() {
 	int i, x, y, z;
 	LL l = 0, r = 5e5, mid, ans = -1;
 	cin >> n; 
-	for(i = 1; i <= n; ++i)h[i] = -1;//初始化h数组为-1 
-	for(i=1; i<n; ++i) {
+	for(i = 1; i <= n; ++i)
+		h[i] = -1;//初始化h数组为-1 
+	for(i = 1; i < n; ++i) {
 		cin >> x >> y >> z;//输入 
-		add(x,y,z), add(y,x,z);//加边 
+		add(x, y, z), add(y, x, z);//加边 
 	}
 	dfs(1, 0, 0);//寻找未被封死的子树 
 	cin >> m; 
-	for(i = 1; i <= m; ++i)army[i] = read();
+	for(i = 1; i <= m; ++i)
+		cin >> army[i];
 	while(l <= r) { //2.二分答案
 		mid = (l + r) >> 1;
-		if(check(mid))r = mid - 1, ans = mid;
+		if(check(mid))
+			r = mid - 1, 
+			ans = mid;
 		else l = mid + 1;
 	}
 	printf("%lld", ans);
